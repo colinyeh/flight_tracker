@@ -17,6 +17,7 @@
 
 .highlight {
   background: linear-gradient(90deg, #0070f3 0%, #00a6ff 100%);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -26,4 +27,14 @@
   font-size: 1.25rem;
   color: rgba(255, 255, 255, 0.6);
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 2rem 1rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
 }
