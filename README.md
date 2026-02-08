@@ -1,36 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ✈️ Funcode Flight Tracker
 
-## Getting Started
+Yo! Welcome to the **Funcode Flight Tracker**. This is a sleek, real-time flight tracking app built with the latest web tech. It allows users to punch in a flight number and get instant details—perfect for checking if your flight is delayed or just to see where planes are going.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-   **Flight Lookup**: Enter an IATA flight code (like `UA123`) to get the deets.
+-   **Real-time Status**: See if it's scheduled, active, landed, or cancelled.
+-   **Detailed Info**:
+    -   Airline & Flight Number
+    -   Origin & Destination (City, Time, Terminal, Gate)
+    -   Duration Calculation
+-   **Responsive Design**: Looks good on desktop and mobile.
+-   **Modern UI**: Glassmorphism touches and smooth interactions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+-   **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
+-   **Language**: TypeScript
+-   **Styling**: CSS Modules (Vanilla CSS for that fine-grained control)
+-   **API**: [Aviationstack API](https://aviationstack.com/)
+-   **State Management**: React Hooks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🏁 Getting Started
 
-## Learn More
+Get this thing running locally in no time.
 
-To learn more about Next.js, take a look at the following resources:
+1.  **Clone the repo**
+    ```bash
+    git clone https://github.com/yourusername/flight_tracker.git
+    cd flight_tracker
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2.  **Install dependencies**
+    ```bash
+    npm install
+    # or yarn, pnpm, bun
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3.  **Environment Setup**
+    You need an API key from [Aviationstack](https://aviationstack.com/).
+    Create a `.env.local` file in the root:
+    ```env
+    AVIATIONSTACK_API_KEY=your_api_key_here
+    ```
 
-## Deploy on Vercel
+4.  **Run it**
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    Open [http://localhost:3000](http://localhost:3000) and start tracking!
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## ⚠️ Notes
+
+-   The app uses the **free tier** of Aviationstack, which only supports HTTP (not HTTPS) for the API endpoint. The request is proxied through the Next.js API route (`/api/flights`), so the frontend remains secure.
+-   If you don't have an API key, the app won't fetch real data.
+
+## 🤝 Contributing
+
+Feel free to open a PR if you want to add map visualization or historical data.
+
+---
+
+*Built with ❤️ by Funcode AI*
